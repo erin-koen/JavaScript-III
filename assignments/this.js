@@ -11,10 +11,10 @@
 
 // Principle 1
 
-// code example for Window Binding
-const someFunction = function() {
-    console.log (`${this.name} is bound to the global scope`);
-}
+// // code example for Window Binding
+// const someFunction = function() {
+//     console.log (`${this.name} is bound to the global scope`);
+// }
 
 
 // Principle 2
@@ -46,16 +46,16 @@ const someFunction = function() {
 // pineStreet.listing();
 
 
-// Principle 4
-// code example for Explicit Binding
+// // Principle 4
+// // code example for Explicit Binding
 
-const location = {
-    location: "brooklyn"
-}
-const fruitStreets = ['pineapple street', 'cranberry street', 'orange street'];
+// const location = {
+//     location: "brooklyn"
+// }
+// const fruitStreets = ['pineapple street', 'cranberry street', 'orange street'];
 
-function describe(streets){
-    console.log(`I live in ${this.location}, close to ${fruitStreets}`)
-}
+// function describe(streets){
+//     console.log(`I live in ${this.location}, close to ${fruitStreets}`)
+// }
 
-describe.call(location, fruitStreets);
+// describe.call(location, fruitStreets);
