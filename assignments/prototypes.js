@@ -20,7 +20,7 @@ function GameObject(attributes){
 }
 
 GameObject.prototype.destroy = function(){
-  return 'Object was removed from the game';
+  return ' was removed from the game';
 }
 
 
@@ -92,8 +92,8 @@ function Villain(attr) {
 }
 
 Villain.prototype = Object.create(Humanoid.prototype);
-Villain.prototype.harm = function(target, amount){
-  target.healthPoints - amount;
+Villain.prototype.harm = function(target){
+  target.healthPoints--;
 }
 
 const villain1 = new Villain({
@@ -129,11 +129,14 @@ const villain1 = new Villain({
     language: 'Common Tongue',
   });
 
-villain1.harm(villain2, 16);
+villain2.harm(villain1);
+villain2.harm(villain1);
+villain2.harm(villain1);
+villain2.harm(villain1);
+villain2.harm(villain1);
 
 
-
-console.log(villain2)
+console.log(villain1)
 
 
 // const mage = new Humanoid({
